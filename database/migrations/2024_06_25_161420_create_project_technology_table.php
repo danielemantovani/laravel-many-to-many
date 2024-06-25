@@ -20,6 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('technology_id');
             $table->foreign('technology_id')->references('id')->on('technologies')->cascadeOnDelete();
 
+            //definizione delle chiavi primarie della tabella ponte
             $table->primary(['project_id', 'technology_id']);
         });
     }
