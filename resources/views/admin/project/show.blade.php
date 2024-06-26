@@ -6,15 +6,10 @@
     <p>{{$project->content}}</p>
     <p>{{$project->type?->technology}}</p>
     <p>{{$project->slug}}</p>
-    <ul>
         @forelse ($project->technologies as $technology)
-        <li>
-            {{ $technology->name }}
-        </li>
+        <p> Tecnologia usata: {{ $technology->name }}</p>
         @empty
-        <li>
-            Devi ancora inserire una tecnolgia
-        </li>
+        <p>Devi ancora inserire una tecnolgia</p>
         @endforelse
     </ul>
 </div>
