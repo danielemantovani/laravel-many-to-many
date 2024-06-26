@@ -18,6 +18,7 @@
                     <th scope="col">Titolo</th>
                     <th scope="col">Contenuto</th>
                     <th scope="col">Tipo</th>
+                    <th scope="col">Tecnologia</th>
                     <th scope="col">Slug</th>
                     <th class="text-center" scope="col">Azioni</th>
                 </tr>
@@ -29,6 +30,7 @@
                         <td>{{ $project->title }}</td>
                         <td>{{ $project->content }}</td>
                         <td>{{$project->type?->technology}}</td>
+                        <td>{{$project->technology?->name}}</td>
                         <td>{{ $project->slug }}</td>
                         <td>
                             <div class="d-flex gap-2">
